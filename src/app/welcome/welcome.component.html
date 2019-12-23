@@ -1,0 +1,19 @@
+<div class="container text-center">
+    <h2>Welcome to <span class="text-danger">{{ title }}</span></h2>
+    <div class="container">
+        Welcome {{name1}}. You can manage your todos <a routerLink="/todos">Here</a>
+    </div>
+
+    <div class="container">
+        Click here to get a customized welcome message
+        <button (click)="getWelcomeMessageWithParameter()" class="btn btn-success">Get Welcome Message</button>
+    </div>
+
+    <div class="container" *ngIf="welcomeMessageFromService">
+       <h2>Your Customized Welcome Message</h2>
+       {{welcomeMessageFromService}}
+    </div>
+</div>
+
+<!-- <span style="color: yellowgreen;">{{ name }}</span></h2> -->
+
