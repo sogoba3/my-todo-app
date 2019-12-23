@@ -4,14 +4,15 @@
     <div>
 
 <div class="container">
-<table class="table text-center">
-    <thead>
+<table class="table table-striped text-center">
+    <thead class="thead-dark">
         <tr>
             <th>id</th>
             <th>Description</th>
             <th>Target Date</th>
             <th>is Completed?</th>
-            <th>Actions</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -21,7 +22,9 @@
             <td>{{todo.targetDate | date}}</td>
             <td>{{todo.done}}</td>
             <td>
-                <button class="btn btn-success" (click)="updateTodo(todo.id)   ">Update</button> |
+                <button class="btn btn-success" (click)="updateTodo(todo.id)   ">Update</button>
+            </td>
+            <td>
                 <button class="btn btn-warning" (click)="deleteTodo(todo.id)   ">Delete</button>
             </td>
         </tr>
